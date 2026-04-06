@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Scientific Scanner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+    <h1>Scientific Notation Scanner</h1>
+    <p class="subtitle">Enter a number</p>
+
+    <div class="input-group">
+      <input type="text" id="inputNumber" placeholder="examples: 1.5e3">
+      <button onclick="cek()">Scan</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- CONTOH -->
+  <div class="examples">
+
+    <div class="box valid">
+      <h3>Valid</h3>
+      <div class="items">
+        <span onclick="isi('2e3')">2e3</span>
+        <span onclick="isi('1.5e-2')">1.5e-2</span>
+        <span onclick="isi('7e9')">7e9</span>
+      </div>
+    </div>
+
+    <div class="box invalid">
+      <h3>Invalid</h3>
+      <div class="items">
+        <span onclick="isi('300')">300</span>
+        <span onclick="isi('0.25')">0.25</span>
+        <span onclick="isi('abc')">abc</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
